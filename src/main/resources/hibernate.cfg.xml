@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory name="hibernate.cfg.xml">
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL81Dialect</property>
+
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <!--БД на 10.0.14.12-->
+        <property name="hibernate.default_schema">sisslr</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://10.0.14.12:5432/jahia</property>
+        <property name="hibernate.connection.username">jahia</property>
+        <property name="hibernate.connection.password">jahia</property>
+
+        <!--БД SIS_SLR на локальном компе -->
+        <!--<property name="hibernate.default_schema">sisslr</property>-->
+        <!--<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/SIS_SLR</property>-->
+        <!--<property name="hibernate.connection.username">postgres</property>-->
+        <!--<property name="hibernate.connection.password">!234Qwer</property>-->
+
+        <property name="show_sql">true</property>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <mapping class="org.ipps.sisslr.models.Address"/>
+        <mapping class="org.ipps.sisslr.models.AdministrativeTerritories"/>
+        <mapping class="org.ipps.sisslr.models.GovernmentInstitution"/>
+        <mapping class="org.ipps.sisslr.models.License"/>
+        <mapping class="org.ipps.sisslr.models.LicenseAction"/>
+        <mapping class="org.ipps.sisslr.models.LicenseActionCross"/>
+        <mapping class="org.ipps.sisslr.models.LicenseActivity"/>
+        <mapping class="org.ipps.sisslr.models.LicensedInstitution"/>
+        <mapping class="org.ipps.sisslr.models.LicensedTerritory"/>
+        <mapping class="org.ipps.sisslr.models.LicenseServices"/>
+        <mapping class="org.ipps.sisslr.models.LicenseServicesCross"/>
+        <mapping class="org.ipps.sisslr.models.Street"/>
+        <mapping class="org.ipps.sisslr.models.TaxInspection"/>
+        <mapping class="org.ipps.sisslr.models.TypeLocality"/>
+        <mapping class="org.ipps.sisslr.models.TypeOfCompany"/>
+        <mapping class="org.ipps.sisslr.models.TypeStreet"/>
+        <mapping class="org.ipps.sisslr.models.ULandiE"/>
+
+    </session-factory>
+</hibernate-configuration>
